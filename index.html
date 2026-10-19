@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CodeFix Express — Bugs fixed. Concepts explained.</title>
+<style>
+:root{--navy:#1d274f;--blue:#4b70dc;--light:#e8edff;--ink:#252a39;--muted:#687087;--bg:#f8f9fc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.55}
+header{background:white;border-bottom:1px solid #e6e9f2;padding:18px max(5vw,20px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-weight:850;color:var(--navy);font-size:1.25rem}.logo span{color:var(--blue)}
+nav a{color:var(--navy);text-decoration:none;margin-left:18px;font-weight:650}
+main{max-width:1120px;margin:auto;padding:44px 22px}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+.kicker{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+h1{font-size:clamp(2.5rem,6vw,4.4rem);line-height:1.04;color:var(--navy);margin:14px 0}
+.lead{font-size:1.15rem;color:var(--muted);max-width:620px}
+.btn{display:inline-block;background:var(--blue);color:white;border:0;border-radius:12px;padding:13px 19px;font-weight:800;text-decoration:none;cursor:pointer}
+.panel{background:white;border:1px solid #e4e8f4;border-radius:20px;padding:24px;box-shadow:0 10px 28px #1d274f0c}
+.price{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid #edf0f6;gap:12px}.price:last-child{border:0}
+.price strong{font-size:1.15rem;color:var(--navy)}.tag{background:var(--light);color:var(--navy);border-radius:99px;padding:5px 10px;font-size:.8rem;font-weight:800}
+section{margin-top:54px}h2{color:var(--navy);font-size:2rem;margin-bottom:8px}.sub{color:var(--muted);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{background:white;border:1px solid #e4e8f4;border-radius:16px;padding:20px}.feature h3{color:var(--navy);margin-top:0}
+form{display:grid;gap:13px}label{font-weight:750;font-size:.9rem}input,select,textarea{width:100%;padding:12px;border:1px solid #d8deeb;border-radius:10px;font:inherit;background:#fff}
+textarea{min-height:90px;resize:vertical}.notice{font-size:.88rem;color:var(--muted);background:#f2f5ff;border-radius:10px;padding:12px}
+footer{background:var(--navy);color:white;padding:24px max(5vw,20px);margin-top:55px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}nav a{margin-left:8px}}
+</style>
+</head>
+<body>
+<header><div class="logo">CodeFix <span>Express</span></div><nav><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#book">Book help</a></nav></header>
+<main>
+<div class="hero">
+  <div><div class="kicker">Student debugging support</div><h1>Bugs fixed.<br>Concepts explained.</h1>
+  <p class="lead">Get fast, one-to-one help from experienced CS students. We help you understand the bug and apply the fix yourself.</p>
+  <a class="btn" href="#book">Request a session →</a>
+  <p class="sub">Python · Java · C++ · JavaScript</p></div>
+  <div class="panel" id="pricing"><div class="kicker">Simple student pricing</div>
+    <div class="price"><div><strong>Quick Fix</strong><br><small>15-minute debugging session</small></div><span class="tag">$5 / ≈ ₸2,400</span></div>
+    <div class="price"><div><strong>Emergency Pass</strong><br><small>30-minute urgent session</small></div><span class="tag">$12 / ≈ ₸5,700</span></div>
+    <p class="notice">Response target: under 15 minutes during staffed hours. Emergency sessions are subject to tutor availability.</p>
+  </div>
+</div>
+<section id="how"><h2>How it works</h2><p class="sub">A simple, learning-first process.</p>
+<div class="grid">
+<div class="feature"><h3>01 — Tell us</h3><p>Describe the error, programming language and deadline. Never send passwords or API keys.</p></div>
+<div class="feature"><h3>02 — Debug together</h3><p>A tutor reviews the code with you by screen share or secure code review and tests the fix.</p></div>
+<div class="feature"><h3>03 — Understand</h3><p>Receive a short bug note: cause, fix and how to prevent the same mistake.</p></div>
+</div></section>
+<section><h2>Why CodeFix Express?</h2><div class="grid">
+<div class="feature"><h3>Human-checked</h3><p>A tutor tests the proposed fix instead of relying only on an AI-generated answer.</p></div>
+<div class="feature"><h3>Course-aware</h3><p>Get support from a senior student familiar with programming courses and student deadlines.</p></div>
+<div class="feature"><h3>Learning first</h3><p>We explain the issue. You remain responsible for applying and understanding your own work.</p></div>
+</div></section>
+<section id="book"><h2>Request a session</h2><p class="sub">Prototype form — demonstrates the booking flow; it does not submit or store data.</p>
+<div class="panel"><form id="requestForm">
+<div><label for="name">First name or nickname</label><input id="name" required placeholder="e.g. Alex"></div>
+<div><label for="language">Programming language</label><select id="language" required><option value="">Choose a language</option><option>Python</option><option>Java</option><option>C++</option><option>JavaScript</option><option>Other</option></select></div>
+<div><label for="plan">Session type</label><select id="plan" required><option value="">Choose a session</option><option>Quick Fix — 15 min — $5</option><option>Emergency Pass — 30 min — $12</option></select></div>
+<div><label for="error">What is going wrong?</label><textarea id="error" required placeholder="Describe the error message or unexpected behaviour. Do not include credentials or private data."></textarea></div>
+<label><input type="checkbox" id="consent" required style="width:auto"> I agree to share only the information needed for this request and understand this demo does not transmit data.</label>
+<button class="btn" type="submit">Preview request</button><div id="result" role="status" aria-live="polite"></div>
+</form></div>
+</section>
+</main>
+<footer><strong>CodeFix Express</strong><br><small>Prototype only · No real booking or payment processing · Bugs fixed. Concepts explained.</small></footer>
+<script>
+document.getElementById('requestForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value.trim();
+ const lang=document.getElementById('language').value;
+ const plan=document.getElementById('plan').value;
+ document.getElementById('result').innerHTML='<p class="notice"><strong>Demo request prepared.</strong> '+name.replace(/[<>&"]/g,'')+' · '+lang+' · '+plan+'. In the real MVP, this would be sent to the coordinator for tutor matching. No data has been transmitted.</p>';
+});
+</script>
+</body>
+</html>
